@@ -1,29 +1,23 @@
 class Solution(object):
     def isPalindrome(self, s):
-        lower_s = list(s.lower())
-        l_pointer = 0
-        r_pointer = -1
+        l_pointer, r_pointer = 0, len(s) - 1
 
-        while len(lower_s):
-            left_char = lower_s[l_pointer]
-            right_char = lower_s[r_pointer]
+        while l_pointer < r_pointer:
+            left_char = s[l_pointer]
+            right_char = s[r_pointer]
 
             if not left_char.isalnum():
-                lower_s.pop(l_pointer)
+                l_pointer += 1
                 continue
 
             if not right_char.isalnum():
-                lower_s.pop(r_pointer)
+                r_pointer -= 1
                 continue
 
-            if left_char != right_char:
+            if left_char.lower() != right_char.lower():
                 return False
 
-            if left_char == right_char and len(lower_s) == 1:
-                return True
+            l_pointer += 1
+            r_pointer -= 1
 
-            lower_s.pop(l_pointer)
-            lower_s.pop(r_pointer)
-
-        return len(lower_s) == 0
-   
+        return True
