@@ -3,6 +3,7 @@ from typing import List
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+
         common_phrases: List[str] = []
         min_len_str = strs[0]
 
@@ -10,16 +11,19 @@ class Solution:
             if len(s) < len(min_len_str):
                 min_len_str = s
 
+
+        match = True
         for i in range(len(min_len_str)):
 
-            match = True
             for word in strs:
                 if word[i] != min_len_str[i]:
                     match = False
                     break
 
-            if match:
-                common_phrases.append(min_len_str[i])
+            if not match:
+                break
+
+            common_phrases.append(min_len_str[i])
 
         if not common_phrases:
             return ''
