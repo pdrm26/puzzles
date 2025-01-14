@@ -1,4 +1,4 @@
-class Solution {
+export default class Solution {
   cleanerData(text: string): string {
     const alphanumericChars =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
