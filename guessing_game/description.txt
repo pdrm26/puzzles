@@ -1,0 +1,7 @@
+This is a simple number guessing game.
+
+The program will pick a random whole number between 1 and 100 (inclusive), and you, the player, will try to guess what it is.
+You have a limited number of attempts, typically 10.
+After each guess, the program will tell you if your guess was 'Too high!' or 'Too low!'.
+The game ends when you guess the correct number or you run out of attempts.
+The goal is to guess the number in as few tries as possible!
