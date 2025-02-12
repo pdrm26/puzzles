@@ -1,0 +1,16 @@
+Challenge: Create a function run_timing() that calculates the average time for your 10 km runs.
+
+Requirements:
+    1. The function prompts the user to enter the time (in minutes) for each 10 km run.
+    2. It continues prompting until the user presses Enter without entering a value.
+    3. After the user presses Enter, the function calculates and displays the average run time and the number of runs.
+    4. All numeric inputs and the average should be floating-point values.
+
+Enter 10 km run time: 15
+Enter 10 km run time: 20
+Enter 10 km run time: 10
+Enter 10 km run time: <enter>
+Average of 15.0, over 3 runs
+
+
+Focus: Data accumulation, type conversion (string to float), and calculating statistics.
