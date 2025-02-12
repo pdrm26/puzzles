@@ -1,0 +1,5 @@
+Challenge: Reimplement Python's sum() function as mysum().
+
+Requirements:
+    mysum() should accept a variable number of individual numeric arguments (e.g., mysum(1, 2, 3) instead of sum([1])).
+    Do not use the built-in sum() function in your implementation.
