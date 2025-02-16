@@ -1,0 +1,9 @@
+Write a function hex_output that converts a hexadecimal number (entered as a string) to its decimal equivalent,
+without using int() to convert the entire number at once.
+For example, if the user enters "50", the function should output 80 (since 0x50 = 80 in decimal).
+
+Key points:
+
+Input is a hex string (e.g., "50", not "0x50")
+Convert digit by digit (can use int() for single digits)
+Cannot use direct hex-to-decimal conversion of the full number
