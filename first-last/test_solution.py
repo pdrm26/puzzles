@@ -2,7 +2,7 @@ import unittest
 from solution import firstlast
 
 
-class TestFirstLat(unittest.TestCase):
+class TestFirstLast(unittest.TestCase):
     def test_string_input(self):
         self.assertEqual(firstlast("abc"), "ac")
         self.assertEqual(firstlast("a"), "a")
