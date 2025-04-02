@@ -98,7 +98,10 @@ test_cases = [
 
 @pytest.mark.parametrize("test_case", test_cases, ids=[tc["name"] for tc in test_cases])
 def test_merge_sorted_array(test_case):
-    Solution().merge(
-        test_case["nums1"], test_case["m"], test_case["nums2"], test_case["n"]
+    nums1 = test_case["nums1"].copy()
+    expected = test_case["expected"]
+
+    Solution().merge(nums1, test_case["m"], test_case["nums2"], test_case["n"])
+    assert nums1 == expected, (
+        f"Failed {test_case['name']}: expected {expected}, got {nums1}"
     )
-    assert test_case["nums1"] == test_case["expected"]
