@@ -1,18 +1,18 @@
 class Solution:
     def merge(self, nums1, m, nums2, n) -> None:
-        nums1_i = 0
-        nums2_i = 0
-        while nums1_i < m + n and n != 0:
-            if nums1_i < m:
-                if nums1[nums1_i] < nums2[nums2_i]:
-                    nums1_i += 1
-                    continue
+        p1 = m - 1
+        p2 = n - 1
+        p = m + n - 1
+        while p1 >= 0 and p2 >= 0:
+            if nums1[p1] > nums2[p2]:
+                nums1[p] = nums1[p1]
+                p1 -= 1
+            else:
+                nums1[p] = nums2[p2]
+                p2 -= 1
+            p -= 1
 
-                nums1[nums1_i], nums2[nums2_i] = nums2[nums2_i], nums1[nums1_i]
-                nums2.sort()
-                nums1_i += 1
-                continue
-
-            nums1[nums1_i], nums2[nums2_i] = nums2[nums2_i], nums1[nums1_i]
-            nums1_i += 1
-            nums2_i += 1
+        while p2 >= 0:
+            nums1[p] = nums2[p2]
+            p2 -= 1
+            p -= 1
